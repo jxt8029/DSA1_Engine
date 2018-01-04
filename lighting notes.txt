@@ -1,0 +1,42 @@
+//cam location --> uniform
+//light location --> uniform
+
+//frag location --> varying (out in vshader, in in fshader)
+//frag normal --> varying (out in vshader, in in fshader)
+//both get values from attributes
+
+//material ambient component
+//diffuse component
+//specular component
+//specular alpha
+//const hard-coded in shader
+
+//L = normalize(light location - frag location);
+//N = frag normal;
+
+//Max(N dot L, 0); --> keep from having negative light values
+
+
+_______________________________________________________________________________________
+
+Vshader:
+
+attribute modelVertLoc; --> varying fragLoc = vertLoc;
+attribute modelVertNorm; --> varying fragNorm = vertNorm;
+
+
+Fshader:
+
+uniform camLoc;
+uniform lightLoc;
+
+varying fragLoc; //from vShader
+varying fragNorm; //from vShader
+
+L = normalize(   );               //diffuse = max(L dot N, 0);
+V = normalize(   );               //spec = max = (max(H dot N, 0);
+H = normalize(   );
+N = normalize(   );
+
+brightness = .1 + .5 & diffuse + .5 * spec^16;
+color = brightness * (1, 1, 1);

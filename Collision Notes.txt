@@ -1,0 +1,35 @@
+Sphere-Sphere -> Best for our current engine
+-------------
+D = centerA - centerB
+
+if(|D| < radiusA + radiusB) OR if(D^2 < (rA+rB)^2)
+	No Collision
+
+---------
+AABB-AABB
+---------
+D = centerA - centerB
+
+//For L = x, y, or z
+if(|D*L| > |length to corner A * L| + |length to corner B * L|)
+	No Collision
+
+-----------
+Sphere-AABB
+-----------
+//A is sphere, B is box
+D = cA - cB
+P = point on box closest to sphere
+Dp = cA - P
+//where e is distance to corner from center of box
+P = cB + clamp(D, -e, e)
+if(|Dp| > rA)
+	No Collision
+
+---------------------
+//Sphere size equal to greatest vertex distance from center
+//(store max distance and step through all vertices)
+sphere radius = model max radius * transform.averageScale
+//sphere center is transform.location
+
+//Implement all three for game test

@@ -1,0 +1,71 @@
+Engine
+-------
+Location
+Rotation (Tait-Bryant Angles)
+Scale
+
+-All are vec3's
+-All 9 floats go into a model-world matrix
+-translate * rotate * scale = model-world matrix
+------------------------------
+Unity
+-----
+Position
+Rotation (Euler Angles)
+Scale
+
+------------------------------
+model-world matrix -> gl_Position = worldView * model World * vec4(vert loc, 1);
+                               V' =  (P*L)    *  (T*R*S)    *  V
+P = perspective patrix | L = lookat | T = translate | R = rotation | S = scale 
+
+------------------------------
+Translate
+- The last component in the x,y,z vector is scaling factor of translation
+---------
+|1 0 0 dx| |x|   |x + dx|
+|0 1 0 dy| |y| _ |y + dy|  Translation
+|0 0 1 dz| |z| _ |z + dz|
+|0 0 0 1 | |1|   |  1   |
+
+|1 0 0 dx| |x|   |x|
+|0 1 0 dy| |y| _ |y|       Direction
+|0 0 1 dz| |z| _ |z|
+|0 0 0 1 | |0|   |0|
+
+glm::translate(dx, dy, dz);
+
+------------------------------
+Scale
+-----
+|Sx 0 0 0| |x|   |x * Sx|
+|0 Sy 0 0| |y| _ |y * Sy|
+|0 0 Sz 0| |z| _ |z * Sz|
+|0 0 0 1 | |1|   |  1   |
+
+glm::scale(Sx, Sy, Sz);
+
+------------------------------
+Rotate
+------
+|cos(theta) -sin(theta)| |x| _ |xcos(theta) - ysin(theta)|
+|sin(theta) cos(theta) | |y| _ |xsin(theta) + ycos(theta)|  2D rotation
+
+|cos(theta) -sin(theta) 0| |x| _ |xcos(theta) - ysin(theta)|
+|sin(theta) cos(theta)  0| |y| _ |xsin(theta) + ycos(theta)|  3D rotation (z-axis)
+|    0          0       1| |1|   |            z            |
+
+glm::yawPitchRoll(theta(y), theta(x), theta(z));
+
+
+------------------------------
+
+LOOK AT THE CAMERA CODE
+glm::mat4 location = glm::...
+glm:mat4 rotation = glm::...
+glm::mat4 scale = glm::...
+modelWorld = loc * rot * scale
+
+FOR NEXT TIME:
+Relate the model to the transform, object, etc.
+Right now, they're two completely unrelated things.

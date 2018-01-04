@@ -1,0 +1,55 @@
+Github --> GunnyWaffle --> Texture.cpp
+
+fShader
+-------
+uniform sampler2D myTexture; --> texture class
+in vec2 fragUV;              --> model class
+
+void main(){
+	gl_FragColor = texture(myTexture, fragUV);
+}
+
+___________________________________________________
+
+vShader
+-------
+in vec2 modelUV; --> model class
+out vec2 fragUV; --> model class
+
+void main(){
+	fragUV = modelUV;
+	gl_Position = ...
+}
+
+__________________________________________________
+
+Model class
+-----------
+glEnableAttribArray(#);
+glVertexAttribPointer(#, ...);
+
+__________________________________________________
+
+Texture Class
+-------------
+char* filename;
+unsigned int texID;
+use();
+load();
+unload();
+
+use(){
+	glBindTexture(GL_TEXTURE_2D, texID);
+}
+
+load(){
+	//1. use FreeImage to read from hard drive
+	//2. generate and bind texID
+	//3. upload
+	//4. set filters
+	//5. unload with FreeImage
+}
+
+unload(){
+	glDeleteTextures(1, &texID);
+}

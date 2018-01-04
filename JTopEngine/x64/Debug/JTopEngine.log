@@ -1,0 +1,63 @@
+﻿Camera.obj : error LNK2019: unresolved external symbol glfwGetWindowSize referenced in function "public: void __cdecl Camera::start(void)" (?start@Camera@@QEAAXXZ)
+Camera.obj : error LNK2019: unresolved external symbol glfwGetKey referenced in function "public: void __cdecl Camera::move(void)" (?move@Camera@@QEAAXXZ)
+Main.obj : error LNK2001: unresolved external symbol glfwGetKey
+Camera.obj : error LNK2019: unresolved external symbol glfwGetCursorPos referenced in function "public: void __cdecl Camera::turn(void)" (?turn@Camera@@QEAAXXZ)
+Camera.obj : error LNK2019: unresolved external symbol glfwSetCursorPos referenced in function "public: void __cdecl Camera::start(void)" (?start@Camera@@QEAAXXZ)
+Camera.obj : error LNK2019: unresolved external symbol glfwGetCurrentContext referenced in function "public: __cdecl Camera::Camera(void)" (??0Camera@@QEAA@XZ)
+Camera.obj : error LNK2001: unresolved external symbol __imp___glewUniform3f
+Camera.obj : error LNK2001: unresolved external symbol __imp___glewUniformMatrix4fv
+Main.obj : error LNK2001: unresolved external symbol __imp___glewUniformMatrix4fv
+Engine.obj : error LNK2019: unresolved external symbol __imp_glClearColor referenced in function "public: int __cdecl Engine::load(void)" (?load@Engine@@QEAAHXZ)
+Engine.obj : error LNK2019: unresolved external symbol __imp_glEnable referenced in function "public: int __cdecl Engine::load(void)" (?load@Engine@@QEAAHXZ)
+Engine.obj : error LNK2019: unresolved external symbol __imp_glewInit referenced in function "public: int __cdecl Engine::load(void)" (?load@Engine@@QEAAHXZ)
+Engine.obj : error LNK2019: unresolved external symbol glfwInit referenced in function "public: int __cdecl Engine::load(void)" (?load@Engine@@QEAAHXZ)
+Engine.obj : error LNK2019: unresolved external symbol glfwTerminate referenced in function "public: int __cdecl Engine::load(void)" (?load@Engine@@QEAAHXZ)
+Main.obj : error LNK2001: unresolved external symbol glfwTerminate
+Engine.obj : error LNK2019: unresolved external symbol glfwCreateWindow referenced in function "public: int __cdecl Engine::load(void)" (?load@Engine@@QEAAHXZ)
+Engine.obj : error LNK2019: unresolved external symbol glfwSetInputMode referenced in function "public: int __cdecl Engine::load(void)" (?load@Engine@@QEAAHXZ)
+Engine.obj : error LNK2019: unresolved external symbol glfwGetTime referenced in function "public: static void __cdecl Engine::UpdateTime(void)" (?UpdateTime@Engine@@SAXXZ)
+Main.obj : error LNK2001: unresolved external symbol glfwGetTime
+Engine.obj : error LNK2019: unresolved external symbol glfwMakeContextCurrent referenced in function "public: int __cdecl Engine::load(void)" (?load@Engine@@QEAAHXZ)
+Engine.obj : error LNK2001: unresolved external symbol "public: static float Engine::t" (?t@Engine@@2MA)
+Main.obj : error LNK2001: unresolved external symbol "public: static float Engine::t" (?t@Engine@@2MA)
+Engine.obj : error LNK2001: unresolved external symbol "public: static float Engine::t0" (?t0@Engine@@2MA)
+Engine.obj : error LNK2001: unresolved external symbol "public: static float Engine::dt" (?dt@Engine@@2MA)
+Main.obj : error LNK2019: unresolved external symbol __imp_glClear referenced in function main
+Main.obj : error LNK2019: unresolved external symbol glfwPollEvents referenced in function main
+Main.obj : error LNK2019: unresolved external symbol glfwSwapBuffers referenced in function main
+Model.obj : error LNK2019: unresolved external symbol __imp_glDrawArrays referenced in function "public: void __cdecl Model::render(void)" (?render@Model@@QEAAXXZ)
+Model.obj : error LNK2001: unresolved external symbol __imp___glewBindBuffer
+Model.obj : error LNK2001: unresolved external symbol __imp___glewBufferData
+Model.obj : error LNK2001: unresolved external symbol __imp___glewGenBuffers
+Model.obj : error LNK2001: unresolved external symbol __imp___glewEnableVertexAttribArray
+Model.obj : error LNK2001: unresolved external symbol __imp___glewVertexAttribPointer
+Model.obj : error LNK2001: unresolved external symbol __imp___glewBindVertexArray
+Model.obj : error LNK2001: unresolved external symbol __imp___glewGenVertexArrays
+Shader.obj : error LNK2001: unresolved external symbol __imp___glewAttachShader
+Shader.obj : error LNK2001: unresolved external symbol __imp___glewCompileShader
+Shader.obj : error LNK2001: unresolved external symbol __imp___glewCreateProgram
+Shader.obj : error LNK2001: unresolved external symbol __imp___glewCreateShader
+Shader.obj : error LNK2001: unresolved external symbol __imp___glewDeleteProgram
+Shader.obj : error LNK2001: unresolved external symbol __imp___glewDeleteShader
+Shader.obj : error LNK2001: unresolved external symbol __imp___glewGetProgramInfoLog
+Shader.obj : error LNK2001: unresolved external symbol __imp___glewGetProgramiv
+Shader.obj : error LNK2001: unresolved external symbol __imp___glewGetShaderInfoLog
+Shader.obj : error LNK2001: unresolved external symbol __imp___glewGetShaderiv
+Shader.obj : error LNK2001: unresolved external symbol __imp___glewLinkProgram
+Shader.obj : error LNK2001: unresolved external symbol __imp___glewShaderSource
+Shader.obj : error LNK2001: unresolved external symbol __imp___glewUseProgram
+Texture.obj : error LNK2019: unresolved external symbol __imp_FreeImage_Unload referenced in function "public: void __cdecl Texture::load(void)" (?load@Texture@@QEAAXXZ)
+Texture.obj : error LNK2019: unresolved external symbol __imp_FreeImage_Load referenced in function "public: void __cdecl Texture::load(void)" (?load@Texture@@QEAAXXZ)
+Texture.obj : error LNK2019: unresolved external symbol __imp_FreeImage_GetFileType referenced in function "public: void __cdecl Texture::load(void)" (?load@Texture@@QEAAXXZ)
+Texture.obj : error LNK2019: unresolved external symbol __imp_FreeImage_GetBits referenced in function "public: void __cdecl Texture::load(void)" (?load@Texture@@QEAAXXZ)
+Texture.obj : error LNK2019: unresolved external symbol __imp_FreeImage_GetWidth referenced in function "public: void __cdecl Texture::load(void)" (?load@Texture@@QEAAXXZ)
+Texture.obj : error LNK2019: unresolved external symbol __imp_FreeImage_GetHeight referenced in function "public: void __cdecl Texture::load(void)" (?load@Texture@@QEAAXXZ)
+Texture.obj : error LNK2019: unresolved external symbol __imp_FreeImage_ConvertTo32Bits referenced in function "public: void __cdecl Texture::load(void)" (?load@Texture@@QEAAXXZ)
+Texture.obj : error LNK2019: unresolved external symbol __imp_glBindTexture referenced in function "public: void __cdecl Texture::load(void)" (?load@Texture@@QEAAXXZ)
+Texture.obj : error LNK2019: unresolved external symbol __imp_glDeleteTextures referenced in function "public: void __cdecl Texture::unload(void)" (?unload@Texture@@QEAAXXZ)
+Texture.obj : error LNK2019: unresolved external symbol __imp_glGenTextures referenced in function "public: void __cdecl Texture::load(void)" (?load@Texture@@QEAAXXZ)
+Texture.obj : error LNK2019: unresolved external symbol __imp_glTexImage2D referenced in function "public: void __cdecl Texture::load(void)" (?load@Texture@@QEAAXXZ)
+Texture.obj : error LNK2019: unresolved external symbol __imp_glTexParameteri referenced in function "public: void __cdecl Texture::load(void)" (?load@Texture@@QEAAXXZ)
+lib\glew32.lib : warning LNK4272: library machine type 'X86' conflicts with target machine type 'x64'
+lib\FreeImage.lib : warning LNK4272: library machine type 'X86' conflicts with target machine type 'x64'
+D:\School\Sophomore Semester 2\DSA 1\JTopEngine\x64\Debug\JTopEngine.exe : fatal error LNK1120: 55 unresolved externals

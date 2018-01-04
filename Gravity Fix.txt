@@ -1,0 +1,2 @@
+Instead of just turning off gravity with E, make E add a normal force
+to the objects.

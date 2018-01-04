@@ -1,0 +1,7 @@
+F = ma
+a = dv / dt
+v = dr / dt	let r = transform.location
+
+for sufficiently small dt, dv, dr, dF...
+v = dr / dt -> dr = V * dt                 (3)
+F = m * (dv / dt) - > dv = F * (dt / m)    (1 and 2)
